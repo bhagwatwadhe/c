@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container p-5">
+        <div class="card">
+            <div class="card-header">Enter Text </div>
+            <div class="card-body">
+                <form action=" http://127.0.0.1:5000/check" method="POST" enctype="multipart/form-data" >
+                    <div class="form-group">
+                        <textarea type="text" name="text" id="text" class="w-100" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="card-footer">Plagarism detected is  {{plagarism}}%</div>
+        </div>
+    </div>
+</body>
+</html>

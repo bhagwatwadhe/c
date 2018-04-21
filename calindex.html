@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+ 
+    
+    <div class="container p-5">
+        <div class="card">
+            <div class="card-header">
+                Calculator
+            </div>
+            <div class="card-body">
+                <form action="http://127.0.0.1:5000/calculate" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="first number" name="num1">
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="second number" name="num2">
+                        </div>
+                    </div>
+                    <hr>
+                        <button type="submit" class="btn btn-primary btn-lg" value="+" name="op">+</button>
+                        <button type="submit" class="btn btn-primary btn-lg" value="-" name="op">-</button>
+                        <button type="submit" class="btn btn-primary btn-lg" value="*" name="op">*</button>
+                        <button type="submit" class="btn btn-primary btn-lg" value="/" name="op">/</button>
+                        <button type="submit" class="btn btn-primary btn-lg" value="sqrt" name="op">Sq Root</button>
+                        <button type="submit" class="btn btn-primary btn-lg" value="sine" name="op">Sine</button>
+                        <button type="submit" class="btn btn-primary btn-lg" value="cos" name="op">Cos</button>
+                </form>
+            </div>                   
+                <div class="card-footer">Ans= {{result}}</div>
+            </div>
+        </div>
+
+        <div class="container p-5">
+            <div class="card">
+                <div class="card-header"> Currency Converter</div>
+                <div class="card-body">
+                    <form action="http://127.0.0.1:5000/currency" method="POST">
+                        <div class="form-group">
+                            <label for="input">Enter Currency</label>
+                            <input type="number" name="currency" id="input" class="form-control">
+                        </div>
+                        <hr>
+                            <button type="submit" class="btn btn-primary btn-lg" value="uti" name="op">USD to INR</button>
+                            <button type="submit" class="btn btn-primary btn-lg" value="itu" name="op">INR to USD</button>
+                            <button type="submit" class="btn btn-primary btn-lg" value="pti" name="op">Pound to INR</button>
+                            <button type="submit" class="btn btn-primary btn-lg" value="itp" name="op">INR to Pound</button>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    Converted Currency= {{currencyResult}}
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<data>
+    <Weather name="1">
+        <number>10</number>
+    </Weather>
+    <Weather name="2">
+        <number>5</number>
+    </Weather>
+    <Weather name="3">
+        <number>4</number>
+    </Weather>
+    <Weather name="4">
+        <number>7</number>
+    </Weather>
+    <Weather name="5">
+        <number>8</number>
+    </Weather>
+    <Weather name="6">
+        <number>3</number>
+    </Weather>
+    <Weather name="7">
+        <number>0</number>
+    </Weather>
+    <Weather name="8">
+        <number>50</number>
+    </Weather>
+    <Weather name="8">
+        <number>50</number>
+    </Weather>
+        <Weather name="8">
+        <number>50</number>
+    </Weather>
+	
+	
+</data>

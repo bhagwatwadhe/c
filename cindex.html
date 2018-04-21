@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10" >
+    <title>Chat Server</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">Chat Box</div>
+            {% for message in messages %}
+            <div class="card-body">
+                {{message}}
+                <hr>
+            </div>
+            {%endfor%}
+            <div class="card-footer">
+                <form action="http://127.0.0.1:5000/chat" enctype="multipart/form-data" method="POST">
+                    <div class="form group">
+                        <label for="message">Enter your message</label>
+                        <input type="text " class="form-control" id="message" name="message">
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
